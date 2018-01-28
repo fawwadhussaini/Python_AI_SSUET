@@ -1,4 +1,4 @@
-# Exercise 9.1 , 9.2 ,
+# Exercise 9.1 , 9.2 , 9.4
 class Restaurant():
 
     def __init__(self,name,cusine_type):
@@ -35,6 +35,7 @@ ginsoy.describe_restaurant()
 ginsoy.set_customers_served(30)
 ginsoy.increment_customers_served(10)
 
+# exercise 9.3 , 9.5
 class User():
     def __init__(self,f_name,l_name):
         self.first_name = f_name
