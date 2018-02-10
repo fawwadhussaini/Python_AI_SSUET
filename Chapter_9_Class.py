@@ -81,7 +81,35 @@ print ('**************************')
 student2.greet_user()
 student2.describe_user()
 
-# 9.5 Login Attempts
+# 9.6 IceCream_Stand
 
+class IceCreamStrand(Restaurant):
+    def __init__(self,name,cusine_type,flavours):
+        super().__init__(name,cusine_type)
+        self.flavours = flavours
 
+    def list_of_flavours(self):
+        print (self.name + ' has following ice cream flavours...')
+        for flavour in self.flavours:
+            print (flavour.title())
 
+Alpine = IceCreamStrand('Alpine','Ice Cream',['choclate','pineapple','bounty','cashew','strawberry'])
+Alpine.list_of_flavours()
+
+# 9.7 Administrator
+
+class Admin(User):
+    def __init__(self,f_name,l_name):
+        super().__init__(f_name,l_name)
+        self.previliage = []
+
+    def set_previliage(self,rights):
+        self.previliage = rights
+
+    def show_previliage(self):
+        print ('User : ' + self.first_name + '_' + self.last_name + ' has following rights')
+        for p in self.previliage:
+            print (p)
+administrator = Admin('Asad','Arshad')
+administrator.set_previliage(['Can create user','Can delete user','Can Generate invoice'])
+administrator.show_previliage()
